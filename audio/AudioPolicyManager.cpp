@@ -456,15 +456,15 @@ audio_devices_t AudioPolicyManager::getDeviceForStrategy(routing_strategy strate
       // output routing
       if (mPhoneState == AudioSystem::MODE_IN_CALL &&
          !AudioSystem::isA2dpDevice((AudioSystem::audio_devices)device) &&
-          device != getDeviceForStrategy(STRATEGY_PHONE) &&
-          strategy == STRATEGY_ENFORCED_AUDIBLE) {
+           device != getDeviceForStrategy(STRATEGY_PHONE) &&
+           strategy == STRATEGY_ENFORCED_AUDIBLE) {
           if (!mStreams[AUDIO_STREAM_ENFORCED_AUDIBLE].mCanBeMuted) {
               ALOGV("getDeviceForStrategy() do not change to phone device for ENFORCED_AUDIBLE");
           } else {
               device = getDeviceForStrategy(STRATEGY_PHONE);
               ALOGV("getDeviceForStrategy() incompatible media and phone devices");
           }
-	  }
+      }
       if (device == AUDIO_DEVICE_NONE) {
         ALOGE("getDeviceForStrategy() no device found for STRATEGY_MEDIA");
       }
@@ -665,10 +665,10 @@ status_t AudioPolicyManager::setDeviceConnectionState(audio_devices_t device,
 
                 ALOGD("turning off Fm device in Mode %d",getFMMode());
                 setFmMode(FM_NONE);
-				setForceUse(AudioSystem::FOR_MEDIA, AudioSystem::FORCE_NONE);
+                setForceUse(AudioSystem::FOR_MEDIA, AudioSystem::FORCE_NONE);
                 newDevice = getDeviceForStrategy(STRATEGY_MEDIA, false);
                 if((newDevice & AudioSystem::DEVICE_OUT_BLUETOOTH_A2DP) ||
-				  (newDevice & AudioSystem::DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES)||
+                  (newDevice & AudioSystem::DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES)||
                   (newDevice & AudioSystem::DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER)) {
                     ALOGW("setDeviceConnectionState() FM off, switch to Wired Headset");
                     setOutputDevice(mPrimaryOutput, AUDIO_DEVICE_OUT_WIRED_HEADSET, true);
@@ -1043,10 +1043,7 @@ AudioPolicyManagerBase::IOProfile *AudioPolicyManager::getProfileForDirectOutput
                                                                uint32_t channelMask,
                                                                audio_output_flags_t flags)
 {
-    if( !((flags & AUDIO_OUTPUT_FLAG_LPA)   ||
-          (flags & AUDIO_OUTPUT_FLAG_TUNNEL)||
-          (flags & AUDIO_OUTPUT_FLAG_VOIP_RX)) )
-        flags = AUDIO_OUTPUT_FLAG_DIRECT;
+
 
     for (size_t i = 0; i < mHwModules.size(); i++) {
         if (mHwModules[i]->mHandle == 0) {
@@ -1569,7 +1566,6 @@ status_t AudioPolicyManager::stopInput(audio_io_handle_t input)
         return NO_ERROR;
     }
 }
-
 
 uint32_t AudioPolicyManager::setOutputDevice(audio_io_handle_t output, audio_devices_t device, bool force, int delayMs)
 {
