@@ -36,7 +36,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/c8812e/bluetooth
 BOARD_HAVE_QCOM_FM := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := c8812e_defconfig
+TARGET_KERNEL_CONFIG := u8833_defconfig
 
 # These currently have to go to the ramdisk for wlan_detect to pick them up.
 # Hopefully they can join their friends at $(KERNEL_MODULES_OUT) soon. :(
