@@ -23,20 +23,14 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/huawei/c8812e/full_c8812e.mk)
 
-# Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME := c8812e \
-    PRODUCT_DEVICE := c8812e \
-    BUILD_FINGERPRINT="Huawei/C8812E/hwc8812e:4.1.1/Huaweic8812e/C00B209:user/ota-rel-keys,release-keys" \
-    PRIVATE_BUILD_DESC="c8812e-user 4.1.1 GRJ90 C00B209 release-keys"
 
 # Correct boot animation size for the screen
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
-# Device identifier. This must come after all inclusions
+# Device name
 PRODUCT_NAME := cm_c8812e
-PRODUCT_GMS_CLIENTID_BASE := android-huawei
+PRODUCT_DEVICE := c8812e
 
 # CM packages
 #PRODUCT_PACKAGES += \
