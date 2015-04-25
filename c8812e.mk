@@ -40,9 +40,9 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.confg.hw_appfsversion=C8812EV5_0_SYSIMG \
-    ro.confg.hw_appsbootversion=C8812EV5_0_APPSBOOT \
-    ro.confg.hw_appversion=C8812EV5_0_KERNEL
+    ro.confg.hw_appfsversion=C8812EV5_1_SYSIMG \
+    ro.confg.hw_appsbootversion=C8812EV5_1_APPSBOOT \
+    ro.confg.hw_appversion=C8812EV5_1_KERNEL
 # cdma config
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.is_cdma_phone=true \
