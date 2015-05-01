@@ -18,7 +18,7 @@
 #$(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Inherit some common CM stuff
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/slim/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/huawei/c8812e/full_c8812e.mk)
@@ -29,7 +29,7 @@ TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # Device name
-PRODUCT_NAME := cm_c8812e
+PRODUCT_NAME := slim_c8812e
 PRODUCT_DEVICE := c8812e
 
 # CM packages
