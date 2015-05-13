@@ -34,7 +34,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/c8812e/bluetooth
 
 
 # Kernel
-TARGET_KERNEL_CONFIG := c8812e_defconfig
+TARGET_KERNEL_CONFIG := u8833_defconfig
 
 # These currently have to go to the ramdisk for wlan_detect to pick them up.
 # Hopefully they can join their friends at $(KERNEL_MODULES_OUT) soon. :(
@@ -50,7 +50,7 @@ KERNEL_EXTERNAL_MODULES:
 TARGET_KERNEL_MODULES := KERNEL_EXTERNAL_MODULES
 
 # Partitions
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 629145600 # 0x40000000 1073741824 //changed for me
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000 # 0x40000000 1073741824 //changed for me
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1207943168 # 0x47FFC000
 
 # Recovery
