@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_c8812e.mk
+    $(LOCAL_DIR)/aosp_c8812e.mk
