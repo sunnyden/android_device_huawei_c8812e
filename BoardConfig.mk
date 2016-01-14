@@ -31,7 +31,8 @@ TARGET_HAS_QACT := false
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/c8812e/bluetooth
 
-
+# Disable DEXPREOPT to allow space for GApps
+WITH_DEXPREOPT := false
 
 # Kernel
 TARGET_KERNEL_CONFIG := c8812e_defconfig
@@ -57,8 +58,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1207943168 # 0x47FFC000
 BOARD_CUSTOM_GRAPHICS := ../../../device/huawei/c8812e/recovery/graphics.c
 TARGET_RECOVERY_FSTAB := device/huawei/c8812e/rootdir/fstab.huawei
 
-# RIL
-BOARD_RIL_CLASS := ../../../device/huawei/c8812e/ril/
+# RIL no need for this 201601
+#BOARD_RIL_CLASS := ../../../device/huawei/c8812e/ril/
 
 # Wi-Fi
 BOARD_HAS_ATH_WLAN := true

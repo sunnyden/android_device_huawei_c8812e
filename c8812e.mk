@@ -35,14 +35,14 @@ PRODUCT_COPY_FILES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
+
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.confg.hw_appfsversion=C8812EV5_1_SYSIMG \
-    ro.confg.hw_appsbootversion=C8812EV5_1_APPSBOOT \
-    ro.confg.hw_appversion=C8812EV5_1_KERNEL
+    ro.confg.hw_appfsversion=C8812EV6_0_SYSIMG \
+    ro.confg.hw_appsbootversion=C8812EV6_0_APPSBOOT \
+    ro.confg.hw_appversion=C8812EV6_0_KERNEL
 # cdma config
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.is_cdma_phone=true \
@@ -56,9 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     gsm.version.baseband=1040 \
-    rild.libpath=/system/lib/libril-qc-1.so \
-    ro.telephony.ril.config=qcomdsds,skippinpukcount,signalstrength \
-    ro.telephony.ril_class=HuaweiRIL
+    rild.libpath=/system/lib/libril-qc-1.so
 
 
 
