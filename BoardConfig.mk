@@ -34,8 +34,8 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/c8812e/bluetooth
 # Disable DEXPREOPT to allow space for GApps
 WITH_DEXPREOPT := false
 
-# Kernel
-TARGET_KERNEL_CONFIG := c8812e_defconfig
+# Kernel temporarily use u8833 defconfig instead of c8812e
+TARGET_KERNEL_CONFIG := u8833_defconfig
 
 # These currently have to go to the ramdisk for wlan_detect to pick them up.
 # Hopefully they can join their friends at $(KERNEL_MODULES_OUT) soon. :(
